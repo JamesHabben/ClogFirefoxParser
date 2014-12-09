@@ -14,7 +14,7 @@ args = argParser.parse_args()
 
 print ' processing file {0}'.format(args.file)
 
-tmpFile = open('/tmp/CGLog_Firefox_4287', 'r')
+tmpFile = open(args.file, 'r')
 count = 0
 for line in tmpFile :
     if (not args.KeyDown and line.find('KeyUp') >=0) or (args.KeyDown and line.find('KeyDown') >= 0) :
